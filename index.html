@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+
+    <title>Base Apparel</title>
+  </head>
+  <body class="entrance-animation">
+    <main>
+      <div class="logo">
+        <img src="./images/logo.svg" alt="Base Apparel" />
+      </div>
+      <div class="main-content">
+        <div class="main-page">
+          <h1 class="main-heading">We're <span>coming soon</span></h1>
+
+          <p class="main-paragraph">
+            Hello fellow shoppers! We're currently building our new fashion
+            store. Add your email below to stay up-to-date with announcements
+            and our launch deals.  </p>
+
+          <form name="form" class="form" id="form" action="/" novalidate>
+            <label for="email" class="sr-only">Email Adress</label>
+            <input
+              type="email" name="email" id="email"aria-desciribedby="error-message-container"class="email" placeholder="Email Address" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" autocomplete="email" 
+              />
+            <div id="error-message-container" aria-live="polite">
+            <span class="hidden" id="error-message" >Please provide a valid Email</span>
+            </div>
+            <button
+              type="submit"class="submit"id="submit" aria-label="submit">
+            </button>
+          </form>
+        </div>
+        <div aria-live="polite">
+          <div
+            class="confirmation-container entrance-animation"
+            id="confirmation-container"
+            hidden="">
+            <h1 class="confirmation-heading">
+              Thank you <span>& welcome!</span>
+            </h1>
+
+            <p class="confirmation-paragraph">
+              Hello fellow shopper! Thank you for joining our newsletter. You
+              will be one of the first to know when we offically open and get
+              access to our exclusive deals.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <picture>
+        <source
+          media="(min-width: 900px )"
+          srcset="./images/hero-desktop.jpg"
+        />
+        <img src="./images/hero-desktop.jpg" alt="" aria-hidden="true" />
+      </picture>
+    </main>
+    <script src="./index.js"></script>
+  </body>
+</html>
